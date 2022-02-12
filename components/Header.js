@@ -6,12 +6,13 @@ import {
   HeartIcon,
   PaperAirplaneIcon,
   MenuIcon,
+  HomeIcon,
 } from '@heroicons/react/solid'
 
 function Header() {
   return (
     <div>
-      <div className="flex max-w-6xl justify-between">
+      <div className="flex justify-between max-w-6xl mx-5 lg:mx-auto">
         {/* left */}
         <div
           className="relative hidden w-24 cursor-pointer 
@@ -36,6 +37,7 @@ function Header() {
         </div>
 
         {/* Middle - Search input field */}
+        <div className='max-w-xs'>
         <div className='relative mt-1 p-3 rounded-md'>
           <div className='absolute inset-y-0 pl-3 flex items-center 
           pointer-events-none'>
@@ -46,9 +48,32 @@ function Header() {
           border-gray-300 focus:ring-black focus:border-black rounded-md' 
           type="text" 
           placeholder="Search" />
+            </div>
         </div>
-
+        
         {/* Right */}
+        <div className='flex items-center justify-end space-x-4'>
+        <HomeIcon className='navBtn' />
+        <MenuIcon className='h-6 md:hidden
+        cursor-pointer' />
+
+        <div className='relative navBtn'>
+            <PaperAirplaneIcon className='navBtn rotate-45'/> 
+            <div className='absolute -top-1 -right-2 text-xs w-5 h-5
+            bg-red-500 rounded-full flex items-center justify-center
+            animate-pulse text-white'>3</div>
+        </div>
+        
+        <PlusCircleIcon className='navBtn' />
+        <UserGroupIcon className='navBtn' />
+        <HeartIcon className='navBtn' />
+
+        <img src='https://media.istockphoto.com/photos/shot-of-a-handsome-young-man-standing-against-a-grey-background-picture-id1335941252?s=612x612' 
+        alt='profile pic'
+        className='h-10 rounded-full
+        cursor-pointer'
+        />
+        </div>
       </div>
     </div>
   )
