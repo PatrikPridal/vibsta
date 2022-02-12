@@ -16,7 +16,7 @@ function Post({ id, username, userImg, img, caption }) {
         {/* Header */}
         <div className="flex items-center p-5">
             <img src={userImg} 
-            className="rounded-full h-12 w-12 object.contain border p-1 mr-3"
+            className="rounded-full h-12 w-12 object-contain border p-1 mr-3"
             alt="" />
             <p className="flex-1 font-bold">{username}</p>
             <DotsHorizontalIcon className="h-5" />
@@ -25,10 +25,30 @@ function Post({ id, username, userImg, img, caption }) {
 
 
         {/* img */}
+        <img src={img} className="object-cover w-full" alt="" />
 
         {/* Buttons */}
+        <div className="flex justify-between px-4 pt-4">
+        <div className="flex space-x-4">
+            <HeartIcon className="h-7 hover:scale-125 cursor-pointer
+        transition-all duration-150 erase-out" />
+            <ChatIcon className="h-7 hover:scale-125 cursor-pointer
+        transition-all duration-150 erase-out" />
+            <PaperAirplaneIcon className="h-7 hover:scale-125 cursor-pointer
+        transition-all duration-150 erase-out rotate-45" />
+        </div>
 
-        {/* Right */}
+        <BookmarkIcon className="h-7 hover:scale-125 cursor-pointer
+        transition-all duration-150 erase-out" />
+
+        </div>
+        
+        {/* caption */}
+        <div>
+            <p className="p-5 truncate">
+                <span className="font-bold mr-1">{username} </span>{caption}
+            </p>
+        </div>
 
         {/* Comments */}
 
