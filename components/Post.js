@@ -35,7 +35,7 @@ function Post({ id, username, userImg, img, caption }) {
             <ChatIcon className="h-7 hover:scale-125 cursor-pointer
         transition-all duration-150 erase-out" />
             <PaperAirplaneIcon className="h-7 hover:scale-125 cursor-pointer
-        transition-all duration-150 erase-out rotate-45" />
+        transition-all duration-150 erase-out" />
         </div>
 
         <BookmarkIcon className="h-7 hover:scale-125 cursor-pointer

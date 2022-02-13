@@ -59,7 +59,7 @@ function Header() {
         cursor-pointer' />
 
         <div className='relative navBtn'>
-            <PaperAirplaneIcon className='navBtn rotate-45'/> 
+            <PaperAirplaneIcon className='navBtn'/> 
             <div className='absolute -top-1 -right-2 text-xs w-5 h-5
             bg-red-500 rounded-full flex items-center justify-center
             animate-pulse text-white'>3</div>
